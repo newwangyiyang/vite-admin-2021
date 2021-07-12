@@ -43,7 +43,7 @@ export default defineComponent({
   /* slider width 210 */
   left: 0;
   width: 100%;
-  overflow: hidden;
+  overflow: auto;
   height: calc(100vh - 50px);
 }
 

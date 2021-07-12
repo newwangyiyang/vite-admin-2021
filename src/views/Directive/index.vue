@@ -1,10 +1,13 @@
 <template>
-  <div class="app-container directive-wrap">
-    <!-- v-drag-dialog -->
-    <div v-drag-dialog @dragDialog="dragDialog">
+  <div class="app-container directive-wrap drag-container">
+    <div @dragDialog="dragDialog">
       <el-button type="primary" @click="open = true">open-dialog</el-button>
       <el-dialog v-model="open" title="提示" width="30%">
-        <span>这是一段信息</span>
+        <template #title>
+          <div v-draggable="['.directive-wrap .el-dialog', '.directive-wrap .el-dialog__header']" class="select-none">
+            这是一段信息
+          </div>
+        </template>
         <template #footer>
           <span class="dialog-footer">
             <el-button @click="open = false">取 消</el-button>
@@ -14,18 +17,25 @@
       </el-dialog>
     </div>
     <!-- v-draggable -->
-    <div
-      v-draggable="{
-        trigger: '.drag-el',
-        body: '.drag-el',
-      }"
-      class="drag-el w-32 h-32 bg-blue-400 rounded-md mt-5"
-    ></div>
+    <el-card shadow="hover" header="自定义div" class="mt15">
+      <div class="drag-dom inline-block relative">
+        <div class="drag-header inline-block">
+          <el-button
+            v-draggable="['.drag-container .drag-dom', '.drag-container .drag-header']"
+            type="success"
+            size="small"
+            icon="el-icon-thumb"
+            >按住进行拖动测试</el-button
+          >
+        </div>
+      </div>
+    </el-card>
     <sticky :stickyTop="84">
       <div class="w-20 h-20 bg-red-400 rounded" />
     </sticky>
     <el-button v-permission="['admin']" type="warning" class="mt-10">admin</el-button>
     <div v-if="defer(50)" class="w-36 h-36 bg-yellow-300 rounded-md"></div>
+    <div v-waves="'teal'" class="w-40 h-40 rounded-md bg-blue-700"></div>
   </div>
 </template>
 

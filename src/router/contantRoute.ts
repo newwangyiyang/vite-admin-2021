@@ -105,6 +105,19 @@ export default [
     ],
   },
   {
+    path: '/waterfall',
+    component: Layout,
+    redirect: '/waterfall/index',
+    children: [
+      {
+        path: 'index',
+        name: 'Waterfall',
+        component: () => import('@/views/Waterfall/index.vue'),
+        meta: { title: 'Waterfall', icon: 'example', affix: false, noCache: true },
+      },
+    ],
+  },
+  {
     path: '/nested',
     component: Layout,
     redirect: '/nested/menu1',

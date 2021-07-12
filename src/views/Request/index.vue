@@ -1,5 +1,5 @@
 <template>
-  <div class="app-container">
+  <div v-loading="loading" class="app-container h-full">
     <ul>
       <li v-for="item in list" :key="item.id">
         <a :href="item.url" class="text-red-400 underline leading-8 truncate w-96 inline-block">{{
@@ -20,12 +20,14 @@ export default defineComponent({
   setup() {
     const state = reactive({
       list: [],
+      loading: true,
     });
     const methods = {
       initData() {
         requestDemo().then((res) => {
           if (res.data) {
             state.list = res.data;
+            state.loading = false;
             ElMessage.success('接口请求成功～');
           }
         });
