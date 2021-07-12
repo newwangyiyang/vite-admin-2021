@@ -1,0 +1,15 @@
+
+*.sh
+node_modules
+*.woff
+*.ttf
+.vscode
+.idea
+dist
+mock
+public
+bin
+build
+config
+index.html
+src/assets

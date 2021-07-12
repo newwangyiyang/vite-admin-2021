@@ -1,0 +1,49 @@
+{
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "dayjs": "^1.10.5",
+    "echarts": "^5.1.2",
+    "element-plus": "^1.0.2-beta.54",
+    "fuse.js": "^6.4.6",
+    "js-cookie": "^2.2.1",
+    "lodash-es": "^4.17.21",
+    "nprogress": "^0.2.0",
+    "path-browserify": "^1.0.1",
+    "path-to-regexp": "^6.2.0",
+    "screenfull": "^5.1.0",
+    "sortablejs": "^1.14.0",
+    "vue": "^3.0.5",
+    "vue-echarts": "^6.0.0-rc.6",
+    "vue-router": "^4.0.8",
+    "vuex": "^4.0.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss7-compat": "^2.2.4",
+    "@types/js-cookie": "^2.2.6",
+    "@types/lodash-es": "^4.17.4",
+    "@types/node": "^16.0.0",
+    "@types/nprogress": "^0.2.0",
+    "@vitejs/plugin-vue": "^1.2.3",
+    "@vue/compiler-sfc": "^3.0.5",
+    "autoprefixer": "^9",
+    "babel-eslint": "^10.1.0",
+    "dotenv": "^10.0.0",
+    "eslint": "^7.30.0",
+    "eslint-config-alloy": "^4.1.0",
+    "eslint-plugin-vue": "^7.12.1",
+    "postcss": "^7",
+    "sass": "^1.35.1",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat",
+    "typescript": "^4.3.5",
+    "vite": "^2.3.8",
+    "vite-plugin-svg-icons": "^1.0.1",
+    "vue-eslint-parser": "^7.7.2",
+    "vue-tsc": "^0.0.24"
+  }
+}
